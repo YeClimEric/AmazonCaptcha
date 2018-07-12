@@ -32,6 +32,7 @@ def createjia(path):
 
 if __name__ == '__main__':
     path = "../jpg/img/"
+    os.mkdir("../jpg/letter")
     jpgname = listfiles(path, "jpg")
     for item in jpgname:
         try:
@@ -120,7 +121,9 @@ if __name__ == '__main__':
                 # 随机生成0-10000的数字
                 a = random.randint(0, 10000)
                 # 更改成用时间命名
-                im3.save("../jpg/letter/%s.gif" % (time.strftime('%Y%m%d%H%M%S', time.localtime()) + str(a)))
+                file_name = "../jpg/letter/%s.gif" % (time.strftime('%Y%m%d%H%M%S', time.localtime()) + str(a))
+                im3.save(file_name)
+                print('save image:{}'.format(file_name))
                 count += 1
 
         except Exception as err:
