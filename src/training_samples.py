@@ -9,7 +9,7 @@ import os
 from PIL import Image
 
 
-# 找出文件夹下所有xml后缀的文件
+# 找出文件夹下所有文件
 def listfiles(rootdir, prefix='.xml'):
     file = []
     for parent, dirnames, filenames in os.walk(rootdir):
