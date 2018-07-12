@@ -4,7 +4,7 @@ import math
 
 
 # 创建文件夹
-def createjia(path):
+def mkdir(path):
     try:
         os.makedirs(path)
     except:

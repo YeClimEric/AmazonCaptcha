@@ -7,7 +7,7 @@ import math
 import os
 import shutil
 
-from util import *
+from util import listfiles,buildvector,VectorCompare
 
 
 if __name__ == '__main__':

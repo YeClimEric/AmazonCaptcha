@@ -8,7 +8,7 @@ import random
 import os
 from PIL import Image
 
-from util import *
+from util import listfiles
 
 
 if __name__ == '__main__':

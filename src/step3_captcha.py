@@ -8,7 +8,7 @@ import math
 import os
 from concurrent.futures import ThreadPoolExecutor
 
-from util import *
+from util import listfiles,buildvector,VectorCompare
 
 # 全局变量
 path = "../jpg/img/"
