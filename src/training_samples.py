@@ -8,26 +8,7 @@ import random
 import os
 from PIL import Image
 
-
-# 找出文件夹下所有文件
-def listfiles(rootdir, prefix='.xml'):
-    file = []
-    for parent, dirnames, filenames in os.walk(rootdir):
-        if parent == rootdir:
-            for filename in filenames:
-                if filename.endswith(prefix):
-                    file.append(rootdir + filename)
-            return file
-        else:
-            pass
-
-
-# 创建文件夹
-def createjia(path):
-    try:
-        os.makedirs(path)
-    except:
-        pass
+from util import *
 
 
 if __name__ == '__main__':
