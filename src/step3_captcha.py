@@ -11,9 +11,9 @@ from concurrent.futures import ThreadPoolExecutor
 from util import listfiles,buildvector,VectorCompare
 
 # 全局变量
-path = "../jpg/img/"
-iconset = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-           'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+path = "../img/src/"
+iconset = ['a', 'b', 'c', 'e', 'f', 'g', 'h', 'j', 'k',
+           'l', 'm', 'n', 'p', 'r', 't', 'u', 'x', 'y']
 
 imageset = []
 for letter in iconset:
@@ -71,7 +71,7 @@ def main(item):
                     # 将黑色0填充到im2中
                     im2.putpixel((x, y), 0)
         # 生成了一张黑白二值照片
-        # im2.show()
+        im2.show()
 
         # 纵向切割
         # 找到切割的起始和结束的横坐标
@@ -129,14 +129,14 @@ def main(item):
     except Exception as err:
         print(err)
         # 如果错误就记录下来
-        file = open("../jpg/error.txt", "a")
+        file = open("../img/error.txt", "a")
         file.write("\n" + item)
         file.close()
 
 
 # 开启多进程
 def runthreading():
-    pool = ThreadPoolExecutor(5)
+    pool = ThreadPoolExecutor(1)
     jpgname = listfiles(path, "jpg")
     for item in jpgname:
         # 识别过的就不再识别了

@@ -10,6 +10,9 @@ import shutil
 from util import listfiles,buildvector,VectorCompare
 
 
+ERROR_FILE = "../jpg/error.txt"
+
+
 if __name__ == '__main__':
     numset = ['0','1','2','3','4','5','6','7','8','9']
     symbol_set = []
@@ -51,7 +54,8 @@ if __name__ == '__main__':
             shutil.copy(item, "../iconset1/%s/" % (guess[0][1]))
         except Exception as err:
             print(err)
+            with open()
             # 如果错误就记录下来
-            file = open("../jpg/error.txt", "a")
+            file = open(, "a")
             file.write("\n" + item)
             file.close()

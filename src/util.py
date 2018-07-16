@@ -52,3 +52,13 @@ def buildvector(im):
         d1[count] = i
         count += 1
     return d1
+
+
+# 生成所有的字母
+def gen_all_letters(case_sensitive = False):
+    low_set = [chr(x) for x in range(ord('a'), ord('z') + 1)]
+    up_set = []
+    if case_sensitive:
+        up_set = [chr(x) for x in range(ord('A'), ord('Z') + 1)]
+    return low_set + up_set
+
